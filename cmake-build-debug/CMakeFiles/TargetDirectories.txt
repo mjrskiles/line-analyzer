@@ -1,0 +1,5 @@
+/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/Debug.dir
+/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/Production.dir
