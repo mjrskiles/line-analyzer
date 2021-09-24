@@ -34,7 +34,7 @@ const int myInput = AUDIO_INPUT_LINEIN;
 
 // The scale sets how much sound is needed in each frequency range to
 // show all 8 bars.  Higher numbers are more sensitive.
-float scale = 60.0;
+float scale = 1000.0;
 
 // An array to hold the 16 frequency bands
 float level[16];
@@ -93,7 +93,7 @@ void loop() {
         // See this conversation to change this to more or less than 16 log-scaled bands?
         // https://forum.pjrc.com/threads/32677-Is-there-a-logarithmic-function-for-FFT-bin-selection-for-any-given-of-bands
 
-
+        tft.fillScreen(ILI9341_BLUE);
 
         for (int i=0; i<16; i++) {
             tft.setCursor(barPositionsX[i], 230);
@@ -108,12 +108,9 @@ void loop() {
             if (val >= shown[i]) {
                 shown[i] = val;
             } else {
-                if (shown[i] > 0) shown[i] = shown[i] - 1;
+                if (shown[i] > 0) shown[i] = shown[i] - (scale / 300.0f);
                 val = shown[i];
             }
-
-            tft.setCursor(barPositionsX[i], 200);
-            tft.print(level[i]);
 
             //Serial.print(shown[i]);
             Serial.print(" ");
