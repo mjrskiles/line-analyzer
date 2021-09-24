@@ -1,5 +1,0 @@
-C:/Users/mjrsk/projects/line-analyzer/cmake-build-teensy41/CMakeFiles/Production.dir
-C:/Users/mjrsk/projects/line-analyzer/cmake-build-teensy41/CMakeFiles/edit_cache.dir
-C:/Users/mjrsk/projects/line-analyzer/cmake-build-teensy41/CMakeFiles/Debug.dir
-C:/Users/mjrsk/projects/line-analyzer/cmake-build-teensy41/CMakeFiles/Z_DUMMY_TARGET.dir
-C:/Users/mjrsk/projects/line-analyzer/cmake-build-teensy41/CMakeFiles/rebuild_cache.dir
