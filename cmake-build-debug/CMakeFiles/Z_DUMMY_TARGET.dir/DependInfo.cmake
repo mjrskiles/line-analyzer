@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/michael/projects/mc-audio/line-analyzer/src/main.cpp" "/Users/michael/projects/mc-audio/line-analyzer/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
+  "C:/Users/mjrsk/projects/line-analyzer/src/main.cpp" "C:/Users/mjrsk/projects/line-analyzer/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -58,11 +58,13 @@ void setup() {
     audioShield.enable();
     audioShield.inputSelect(myInput);
     audioShield.volume(0.5);
+    audioShield.inputLevel(0.5);
     mixer1.gain(0, 0.5);
     mixer1.gain(1, 0.5);
 
     tft.begin();
-    tft.setRotation(1);
+    tft.fillScreen(ILI9341_BLUE);
+    tft.setRotation(3);
 }
 
 void loop() {
@@ -109,6 +111,9 @@ void loop() {
                 val = shown[i];
             }
 
+            tft.setCursor(barPositionsX[i], 200);
+            tft.print(level[i]);
+
             //Serial.print(shown[i]);
             Serial.print(" ");
 
@@ -119,7 +124,7 @@ void loop() {
 //                lcd.write(shown[i] - 1);
 //            }
 
-            tft.drawRect(barPositionsX[i], 0, 20, 12 +(shown[i] * 20), ILI9341_GREEN);
+            tft.drawRect(barPositionsX[i], 230, 19, -40, ILI9341_GREEN);
         }
         Serial.print(" cpu:");
         Serial.println(AudioProcessorUsageMax());
