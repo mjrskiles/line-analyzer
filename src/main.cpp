@@ -51,6 +51,7 @@ const int barPositionsX[16] = {0, 20, 40, 60,
 const int barMaxHeight = 160;
 
 
+
 ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC);
 
 void setup() {
@@ -102,7 +103,7 @@ void loop() {
             // TODO: conversion from FFT data to display bars should be
             // exponentially scaled.  But how keep it a simple example?
             int val = level[i] * scale;
-            if (val > 8) val = 8;
+            if (val > barMaxHeight) val = barMaxHeight;
 
             if (val >= shown[i]) {
                 shown[i] = val;
@@ -124,7 +125,8 @@ void loop() {
 //                lcd.write(shown[i] - 1);
 //            }
 
-            tft.drawRect(barPositionsX[i], 230, 19, -40, ILI9341_GREEN);
+            int rectY = DISPLAY_Y_SIZE - val;
+            tft.drawRect(barPositionsX[i], rectY, 19, val, ILI9341_GREEN);
         }
         Serial.print(" cpu:");
         Serial.println(AudioProcessorUsageMax());
