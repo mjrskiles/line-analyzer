@@ -28,8 +28,8 @@ AudioControlSGTL5000     audioShield;    //xy=366,225
 // GUItool: end automatically generated code
 
 
-const int myInput = AUDIO_INPUT_LINEIN;
-//const int myInput = AUDIO_INPUT_MIC;
+//const int myInput = AUDIO_INPUT_LINEIN;
+const int myInput = AUDIO_INPUT_MIC;
 
 
 // The scale sets how much sound is needed in each frequency range to
@@ -64,7 +64,7 @@ void setup() {
     mixer1.gain(1, 0.5);
 
     tft.begin();
-    tft.fillScreen(ILI9341_BLUE);
+    tft.fillScreen(ILI9341_CYAN);
     tft.setRotation(3);
 }
 
@@ -93,7 +93,7 @@ void loop() {
         // See this conversation to change this to more or less than 16 log-scaled bands?
         // https://forum.pjrc.com/threads/32677-Is-there-a-logarithmic-function-for-FFT-bin-selection-for-any-given-of-bands
 
-        tft.fillScreen(ILI9341_BLUE);
+//        tft.fillScreen(ILI9341_BLUE);
 
         for (int i=0; i<16; i++) {
             tft.setCursor(barPositionsX[i], 230);
@@ -115,15 +115,11 @@ void loop() {
             //Serial.print(shown[i]);
             Serial.print(" ");
 
-//            // print each custom digit
-//            if (shown[i] == 0) {
-//
-//            } else {
-//                lcd.write(shown[i] - 1);
-//            }
+
 
             int rectY = DISPLAY_Y_SIZE - val;
-            tft.drawRect(barPositionsX[i], rectY, 19, val, ILI9341_GREEN);
+            tft.fillRect(barPositionsX[i], rectY, 19, val, ILI9341_MAGENTA);
+            tft.fillRect(barPositionsX[i], 0, 19, rectY - 1, ILI9341_CYAN);
         }
         Serial.print(" cpu:");
         Serial.println(AudioProcessorUsageMax());
